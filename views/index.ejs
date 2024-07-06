@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>News Headlines</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <style>
+ footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      width: 100%;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-content p {
+      margin: 5px 0;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    .contact-list li {
+      display: inline;
+      margin: 0 10px;
+      border-radius: 20rem;
+    }
+
+    .contact-list a {
+      color: #286acc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: flex;
+      align-items: center;
+      border-radius: 20rem;
+      display: inline;
+
+    }
+
+    .contact-list a:hover {
+      color: #199d7c;
+    }
+
+    .contact-list i {
+      margin-right: 8px;
+      font-size: 1.2em;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-list a:hover i {
+      transform: scale(1.2);
+      color: #ffdd57;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content {
+      flex: 1;
+    }
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2196F3; 
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+a {
+  color: #2196F3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  li {
+    margin-bottom: 10px;
+  }
+}
+   </style>
+</head>
+<body>
+  <h1>News Headlines</h1>
+  <ul>
+    <% headlines.forEach(headline => { %>
+      <li class="headline">
+        <a href="<%= headline.url %>"><%= headline.title %></a>
+        <span>(<%= headline.source %>)</span>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+
+<footer>
+    <div class="footer-content">
+      <p>Contact me:</p>
+      <ul class="contact-list">
+        <li><a class="fab fa-twitter" href="https://twitter.com/charanpuvvadi" target="_blank">Twitter</a></li>
+        <li><a class="fas fa-envelop" href="mailto:charankumarpuvvadi@gmail.com">Email</a></li>
+        <li><a class="fab" href="https://www.linkedin.com/in/charan-kumar-puvvadi-727149234/" target="_blank">LinkedIn</a></li>
+      </ul>
+      <p>&copy; 2024 Charan Kumar Puvvadi. All rights reserved.</p>
+    </div>
+  </footer>
+  
+</html>
