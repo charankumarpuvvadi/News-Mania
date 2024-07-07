@@ -1,0 +1,6 @@
+*.HTML linguist-detectable =true
+*.CSS linguist-detectable =true
+*.Javascript linguist-detectable =true
+*.Nodejs linguist-detectable =true
+*.Ejs linguist-detectable =true
+*.Mongodb linguist-detectable =true
